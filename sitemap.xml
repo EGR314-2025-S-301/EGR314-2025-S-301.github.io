@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://embedded-systems-design.github.io/template_report/apendix-a/</loc>
+         <loc>https://embedded-systems-design.github.io/template_report/charts/</loc>
          <lastmod>2025-01-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/template_report/mission-statement/</loc>
+         <loc>https://embedded-systems-design.github.io/template_report/main%20page/</loc>
          <lastmod>2025-01-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://embedded-systems-design.github.io/template_report/team-charter/</loc>
+         <loc>https://embedded-systems-design.github.io/template_report/second-page/</loc>
          <lastmod>2025-01-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
