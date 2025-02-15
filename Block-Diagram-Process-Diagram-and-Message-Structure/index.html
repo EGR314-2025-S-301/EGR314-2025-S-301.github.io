@@ -452,6 +452,19 @@
     Message Types
   </a>
   
+    <nav class="md-nav" aria-label="Message Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key" class="md-nav__link">
+    Key
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -662,6 +675,19 @@
     Message Types
   </a>
   
+    <nav class="md-nav" aria-label="Message Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key" class="md-nav__link">
+    Key
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -694,6 +720,109 @@
 <h2 id="sequence-diagram">Sequence Diagram</h2>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/b03f7472-f672-4f33-be5f-4564422824ab" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="301 Sequence Diagram" src="https://github.com/user-attachments/assets/b03f7472-f672-4f33-be5f-4564422824ab" /></a> <br></p>
 <h2 id="message-types">Message Types</h2>
+<h3 id="key">Key</h3>
+<table>
+<thead>
+<tr>
+<th>Systems</th>
+<th>IDS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Xander</td>
+<td>XH(uint16_t)</td>
+</tr>
+<tr>
+<td>Sara</td>
+<td>SB(uint16_t)</td>
+</tr>
+<tr>
+<td>Julia</td>
+<td>JS(uint16_t)</td>
+</tr>
+<tr>
+<td>Ella</td>
+<td>EG(uint16_t)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Message Type Byte 1-2 (uint16_t)</th>
+<th>Description</th>
+<th>Byte 1-2 (uint16_t)</th>
+<th>Byte 3 (uint8_t)</th>
+<th>Byte 4 (uint16_t)</th>
+<th>M</th>
+<th>Byte 63 (uint16_t)</th>
+<th>Byte 64 (uint16_t)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Desired speed</td>
+<td>0x01(uint16_t)</td>
+<td>XH(uint16_t)</td>
+<td>SB(uint16_t)</td>
+<td>Change Speed(uint16_t)</td>
+<td>0x6e (uint16_t)</td>
+<td>0x64 (uint16_t)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>User Safe?</td>
+<td>0x02(uint16_t)</td>
+<td>SB(uint16_t)</td>
+<td>JS(uint16_t)</td>
+<td>Check Distance(unit16_t)</td>
+<td>0x6e (uint16_t)</td>
+<td>0x64 (uint16_t)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Motor On</td>
+<td>0x03(uint16_t)</td>
+<td>JS(uint16_t)</td>
+<td>SB(uint16_t)</td>
+<td>Yes(uint16_t)</td>
+<td>0x6e (uint16_t)</td>
+<td>0x64 (uint16_t)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Motor Off</td>
+<td>0x04(uint16_t)</td>
+<td>JS(uint16_t)</td>
+<td>SB(uint16_t)</td>
+<td>No(uint16_t)</td>
+<td>0x6e (uint16_t)</td>
+<td>0x64 (uint16_t)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Direct Drive</td>
+<td>0x05(uint16_t)</td>
+<td>XH(uint16_t)</td>
+<td>SB(uint16_t)</td>
+<td>Change Direction(uint16_t)</td>
+<td>0x6e (uint16_t)</td>
+<td>0x64 (uint16_t)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Motor Speed</td>
+<td>0x06(uint16_t)</td>
+<td>SB(uint16_t)</td>
+<td>EG(uint16_t)</td>
+<td>Speed(uint16_t)</td>
+<td>0x6e (uint16_t)</td>
+<td>0x64 (uint16_t)</td>
+</tr>
+</tbody>
+</table>
 
 
 
