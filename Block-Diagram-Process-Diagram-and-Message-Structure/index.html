@@ -618,15 +618,83 @@
 <p><br> This process diagram shows how the messages will be transfered over the daisy chain. 
 <a class="glightbox" href="https://github.com/user-attachments/assets/b03f7472-f672-4f33-be5f-4564422824ab" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="301 Sequence Diagram" src="https://github.com/user-attachments/assets/b03f7472-f672-4f33-be5f-4564422824ab" /></a> </p>
 <h2 id="message-structure">Message Structure</h2>
-<p>This table details the messages that will be sent between the boards. The identifiers at the begining of the messages show who is sending the message to whom. The messages are labled with English identifiers for ease of reading. <br>
-Message Type Byte 1-2 (uint16_t)    |Description    |Byte 1-2 (uint16_t)    |Byte 3 (uint8_t)   |Byte 4 (uint16_t)  |M  |Byte 63 (uint16_t) |Byte 64 (uint16_t)|
-----------------------------------|-------------|---------------------|-----------------|-------------------|---|-------------------|------------------|
-1   |Desired speed  |0x01(uint16_t)|XH(uint16_t)    |SB(uint16_t)   |Change Speed(uint16_t) |0x6e (uint16_t)    |0x64 (uint16_t)|
-2   |User Safe? |0x02(uint16_t) |SB(uint16_t)   |JS(uint16_t)   |Check Distance(unit16_t)   |0x6e (uint16_t)    |0x64 (uint16_t)|
-3   |Motor On   |0x03(uint16_t) |JS(uint16_t)   |SB(uint16_t)   |Yes(uint16_t)  |0x6e (uint16_t)    |0x64 (uint16_t)|
-4   |Motor Off  |0x04(uint16_t) |JS(uint16_t)   |SB(uint16_t)   |No(uint16_t)   |0x6e (uint16_t)    |0x64 (uint16_t)|
-5   |Direct Drive   |0x05(uint16_t) |XH(uint16_t)   |SB(uint16_t)   |Change Direction(uint16_t) |0x6e (uint16_t)    |0x64 (uint16_t)|
-6   |Motor Speed    |0x06(uint16_t) |SB(uint16_t)   |EG(uint16_t)   |Speed(uint16_t)    |0x6e (uint16_t)    |0x64 (uint16_t)|</p>
+<p>This table details the messages that will be sent between the boards. The identifiers at the begining of the messages show who is sending the message to whom. The messages are labled with English identifiers for ease of reading. <br></p>
+<table>
+<thead>
+<tr>
+<th>Message Type Byte 1-2 (uint16_t)</th>
+<th>Description</th>
+<th>Byte 1-2 (uint16_t)</th>
+<th>Byte 3 (uint8_t)</th>
+<th>Byte 4 (uint16_t)</th>
+<th>M</th>
+<th>Byte 63 (uint16_t)</th>
+<th>Byte 64 (uint16_t)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Desired speed</td>
+<td>0x01(uint16_t)</td>
+<td>XH(uint16_t)</td>
+<td>SB(uint16_t)</td>
+<td>Change Speed(uint16_t)</td>
+<td>0x6e (uint16_t)</td>
+<td>0x64 (uint16_t)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>User Safe?</td>
+<td>0x02(uint16_t)</td>
+<td>SB(uint16_t)</td>
+<td>JS(uint16_t)</td>
+<td>Check Distance(unit16_t)</td>
+<td>0x6e (uint16_t)</td>
+<td>0x64 (uint16_t)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Motor On</td>
+<td>0x03(uint16_t)</td>
+<td>JS(uint16_t)</td>
+<td>SB(uint16_t)</td>
+<td>Yes(uint16_t)</td>
+<td>0x6e (uint16_t)</td>
+<td>0x64 (uint16_t)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Motor Off</td>
+<td>0x04(uint16_t)</td>
+<td>JS(uint16_t)</td>
+<td>SB(uint16_t)</td>
+<td>No(uint16_t)</td>
+<td>0x6e (uint16_t)</td>
+<td>0x64 (uint16_t)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Direct Drive</td>
+<td>0x05(uint16_t)</td>
+<td>XH(uint16_t)</td>
+<td>SB(uint16_t)</td>
+<td>Change Direction(uint16_t)</td>
+<td>0x6e (uint16_t)</td>
+<td>0x64 (uint16_t)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Motor Speed</td>
+<td>0x06(uint16_t)</td>
+<td>SB(uint16_t)</td>
+<td>EG(uint16_t)</td>
+<td>Speed(uint16_t)</td>
+<td>0x6e (uint16_t)</td>
+<td>0x64 (uint16_t)</td>
+</tr>
+</tbody>
+</table>
 <h3 id="key">Key</h3>
 <table>
 <thead>
