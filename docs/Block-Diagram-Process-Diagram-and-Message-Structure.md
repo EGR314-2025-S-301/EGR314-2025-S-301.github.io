@@ -17,22 +17,22 @@ This image shows how our individual systems would connect to eachother to send m
 ## Message Structure
 This table details the messages that will be sent between the boards. The identifiers at the begining of the messages show who is sending the message to whom. The messages are labled with English identifiers for ease of reading. <br>
 
-Message Type Byte 1-2 (uint8_t)	|Description	|Byte 1-2 (uint8_t)	|Byte 3 (uint8_t)	|Byte 4 (uint8_t)	|M	|Byte 63 (uint8_t)	|Byte 64 (uint8_t)|
+Message Type Byte 1-2 (char)	|Description	|Byte 1-2 (char)	|Byte 3 (char)	|Byte 4 (char)	|M	|Byte 63 (char)	|Byte 64 (char)|
 ----------------------------------|-------------|---------------------|-----------------|-------------------|---|-------------------|------------------|
-1	|Desired speed	|0x01(uint8_t)|H(uint8_t)	|B(uint8_t)	|Change Speed(uint8_t)	|Y (uint8_t)	|B (uint8_t)|
-2	|User Safe?	|0x02(uint8_t)	|B(uint8_t)	|S(uint8_t)	|Check Distance(unit8_t)	|Y (uint8_t)	|B (uint8_t)|
-3	|Motor On	|0x03(uint8_t)	|S(uint8_t)	|B(uint8_t)	|Yes(uint8_t)	|Y (uint8_t)	|B (uint8_t)|
-4	|Motor Off	|0x04(uint8_t)	|S(uint8_t)	|B(uint8_t)	|No(uint8_t)	|Y (uint8_t)	|B (uint8_t)|
-5	|Direct Drive	|0x05(uint8_t)	|H(uint8_t)	|B(uint8_t)	|Change Direction(uint8_t)	|Y (uint8_t)	|B (uint8_t)|
-6	|Motor Speed	|0x06(uint8_t)	|B(uint8_t)	|G(uint8_t)	|Speed(uint8_t)	|Y (uint8_t)	|B (uint8_t)|
+1	|Desired speed	|0x01(char)|H(char)	|B(char)	|Change Speed(char)	|Y (char)	|B (char)|
+2	|User Safe?	|0x02(char)	|B(char)	|S(char)	|Check Distance(unit8_t)	|Y (char)	|B (char)|
+3	|Motor On	|0x03(char)	|S(char)	|B(char)	|Yes(char)	|Y (char)	|B (char)|
+4	|Motor Off	|0x04(char)	|S(char)	|B(char)	|No(char)	|Y (char)	|B (char)|
+5	|Direct Drive	|0x05(char)	|H(char)	|B(char)	|Change Direction(char)	|Y (char)	|B (char)|
+6	|Motor Speed	|0x06(char)	|B(char)	|G(char)	|Speed(char)	|Y (char)	|B (char)|
 
 ### Key
 Systems	| IDs
 --------|------------
-Xander	|H(uint8_t)
-Sara	  |B(uint8_t)
-Julia	  |S(uint8_t)
-Ella	  |G(uint8_t)
+Xander	|H(char)
+Sara	  |B(char)
+Julia	  |S(char)
+Ella	  |G(char)
 
 <br>The IDs are assigned based on the sender and receiver's last names, as X would interfear with the brodcast character defined by the course.<br>
 ### Sample String
