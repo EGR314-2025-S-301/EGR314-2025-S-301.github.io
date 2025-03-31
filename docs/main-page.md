@@ -21,5 +21,5 @@ EGR 314, Prof. Nichols <br>
 ### Individual GitHub Links
 [Ella Greetis](https://starfruwuit.github.io/egr314report/00mainPage/) <br>
 [Sara Bohart](https://sarabohart.github.io/) <br>
-[Julia Smith](https://juliasmith141414.github.io/) <br>
+[Julia Smith](https://juliasmith141414.github.io/juliasmith-stemteresting/) <br>
 [Xander Heafey](https://xanderheafey.github.io/) <br>
