@@ -19,12 +19,12 @@ This table details the messages that will be sent between the boards. The identi
 
 Message Type Byte 1-2 (uint8_t)	|Description	|Byte 1-2 (uint8_t)	|Byte 3 (uint8_t)	|Byte 4 (uint8_t)	|M	|Byte 63 (uint8_t)	|Byte 64 (uint8_t)|
 ----------------------------------|-------------|---------------------|-----------------|-------------------|---|-------------------|------------------|
-1	|Desired speed	|0x01(uint8_t)|H(uint8_t)	|B(uint8_t)	|Change Speed(uint8_t)	|0x6e (uint8_t)	|0x64 (uint8_t)|
-2	|User Safe?	|0x02(uint8_t)	|B(uint8_t)	|S(uint8_t)	|Check Distance(unit8_t)	|0x6e (uint8_t)	|0x64 (uint8_t)|
-3	|Motor On	|0x03(uint8_t)	|S(uint8_t)	|B(uint8_t)	|Yes(uint8_t)	|0x6e (uint8_t)	|0x64 (uint8_t)|
-4	|Motor Off	|0x04(uint8_t)	|S(uint8_t)	|B(uint8_t)	|No(uint8_t)	|0x6e (uint8_t)	|0x64 (uint8_t)|
-5	|Direct Drive	|0x05(uint8_t)	|H(uint8_t)	|B(uint8_t)	|Change Direction(uint8_t)	|0x6e (uint8_t)	|0x64 (uint8_t)|
-6	|Motor Speed	|0x06(uint8_t)	|B(uint8_t)	|G(uint8_t)	|Speed(uint8_t)	|0x6e (uint8_t)	|0x64 (uint8_t)|
+1	|Desired speed	|0x01(uint8_t)|H(uint8_t)	|B(uint8_t)	|Change Speed(uint8_t)	|Y (uint8_t)	|B (uint8_t)|
+2	|User Safe?	|0x02(uint8_t)	|B(uint8_t)	|S(uint8_t)	|Check Distance(unit8_t)	|Y (uint8_t)	|B (uint8_t)|
+3	|Motor On	|0x03(uint8_t)	|S(uint8_t)	|B(uint8_t)	|Yes(uint8_t)	|Y (uint8_t)	|B (uint8_t)|
+4	|Motor Off	|0x04(uint8_t)	|S(uint8_t)	|B(uint8_t)	|No(uint8_t)	|Y (uint8_t)	|B (uint8_t)|
+5	|Direct Drive	|0x05(uint8_t)	|H(uint8_t)	|B(uint8_t)	|Change Direction(uint8_t)	|Y (uint8_t)	|B (uint8_t)|
+6	|Motor Speed	|0x06(uint8_t)	|B(uint8_t)	|G(uint8_t)	|Speed(uint8_t)	|Y (uint8_t)	|B (uint8_t)|
 
 ### Key
 Systems	| IDs
