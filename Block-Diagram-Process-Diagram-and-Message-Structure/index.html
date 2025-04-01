@@ -630,7 +630,7 @@
 <a href="https://starfruwuit.github.io/egr314report/01BlockDiagram/">Ella's Bidirectional Internet Communication</a></p>
 <h2 id="process-diagram">Process Diagram</h2>
 <p><br> This process diagram shows how the messages will be transfered over the daisy chain. 
-<a class="glightbox" href="https://github.com/user-attachments/assets/b03f7472-f672-4f33-be5f-4564422824ab" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="301 Sequence Diagram" src="https://github.com/user-attachments/assets/b03f7472-f672-4f33-be5f-4564422824ab" /></a> </p>
+<a class="glightbox" href="../updated%20process%20diagram-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="301 Sequence Diagram" src="../updated%20process%20diagram-1.png" /></a></p>
 <h2 id="message-structure">Message Structure</h2>
 <p>This table details the messages that will be sent between the boards. The identifiers at the begining of the messages show who is sending the message to whom. The messages are labled with English identifiers for ease of reading. <br></p>
 <table>
@@ -650,7 +650,7 @@
 <tr>
 <td>1</td>
 <td>Desired speed</td>
-<td>0x01(char)</td>
+<td>AZ(char)</td>
 <td>H(char)</td>
 <td>B(char)</td>
 <td>Change Speed(char)</td>
@@ -660,7 +660,7 @@
 <tr>
 <td>2</td>
 <td>User Safe?</td>
-<td>0x02(char)</td>
+<td>AZ(char)</td>
 <td>B(char)</td>
 <td>S(char)</td>
 <td>Check Distance(unit8_t)</td>
@@ -670,7 +670,7 @@
 <tr>
 <td>3</td>
 <td>Motor On</td>
-<td>0x03(char)</td>
+<td>AZ(char)</td>
 <td>S(char)</td>
 <td>B(char)</td>
 <td>Yes(char)</td>
@@ -680,7 +680,7 @@
 <tr>
 <td>4</td>
 <td>Motor Off</td>
-<td>0x04(char)</td>
+<td>AZ(char)</td>
 <td>S(char)</td>
 <td>B(char)</td>
 <td>No(char)</td>
@@ -690,7 +690,7 @@
 <tr>
 <td>5</td>
 <td>Direct Drive</td>
-<td>0x05(char)</td>
+<td>AZ(char)</td>
 <td>H(char)</td>
 <td>B(char)</td>
 <td>Change Direction(char)</td>
@@ -700,7 +700,7 @@
 <tr>
 <td>6</td>
 <td>Motor Speed</td>
-<td>0x06(char)</td>
+<td>AZ(char)</td>
 <td>B(char)</td>
 <td>G(char)</td>
 <td>Speed(char)</td>
