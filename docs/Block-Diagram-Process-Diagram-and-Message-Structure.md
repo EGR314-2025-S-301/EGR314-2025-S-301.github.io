@@ -20,9 +20,10 @@ This table details the messages that will be sent between the boards. The identi
 Message Type Byte 1-2 (char)	|Description	|Byte 1-2 (char)	|Byte 3 (char)	|Byte 4 (char)	|M	|Byte 63 (char)	|Byte 64 (char)|
 ----------------------------------|-------------|---------------------|-----------------|-------------------|---|-------------------|------------------|
 1	|Desired speed	|AZ(char)|H(char)	|B(char)	|Change Speed(char)	|Y (char)	|B (char)|
-2	|User Safe?	|AZ(char)	|B(char)	|S(char)	|Check Distance(unit8_t)	|Y (char)	|B (char)|
+2	|User Safe?	|AZ(char)	|S(char)	|B(char)	|Check Distance(char)	|Y (char)	|B (char)|
 3	|Direct Drive	|AZ(char)	|H(char)	|B(char)	|Change Direction(char)	|Y (char)	|B (char)|
 4	|Motor Speed	|AZ(char)	|B(char)	|G(char)	|Speed(int)	|Y (char)	|B (char)|
+5 |Distanc Data |AZ(char) |S(char)  |H(char)  |Distance(int) |Y(char) |B(char)|
 
 ### Key
 Systems	| IDs
