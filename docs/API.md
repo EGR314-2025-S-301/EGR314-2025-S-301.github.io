@@ -39,7 +39,7 @@ Sara's system is communicating the current RPM of the motor as an intiger value 
 ##### String format
 Byte 1|Byte 2|Byte 3|Byte 4|Byte 5|Byte 7|Byte 8|
 ------|------|------|------|------|------|------|
-A|Z|B|G|rpm (int)|Y|B|
+A char)|Z (char)|B (char)|G (char)|rpm (int)|Y (char)|B (char)|
 
 ### Xander
 A complete report of the messages Xander's system can handle can be found [here](-LINK TO XANDER'S API PAGE-).
