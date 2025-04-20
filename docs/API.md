@@ -9,6 +9,7 @@ This page outlines the massages out boards are sending and receiving from eachot
 Byte 1|Byte 2|Byte 3|Byte 4|Byte 5|...|Byte 5+x|Byte 6+x|Byte 7+x|
 ------|------|------|------|------|------|---|------|------|
 A|Z|Sender Initial|Receiver Initial|Data 1|...|Data x|Y|B|
+
  <br>
 Where x is the number of data points sent in the message.<br>
 All values for the bytes in the messages are characters unless explicitly specified for the data points.
