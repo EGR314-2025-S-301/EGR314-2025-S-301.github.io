@@ -13,17 +13,17 @@ This image shows how our individual systems would connect to eachother to send m
 [Ella's Bidirectional Internet Communication](https://starfruwuit.github.io/egr314report/01BlockDiagram/)
 ## Process Diagram
 <br> This process diagram shows how the messages will be transfered over the daisy chain. 
-![301 Sequence Diagram](updated%20process%20diagram-1.png)
+![301 Sequence Diagram](Process%20v2-1.png)
 ## Message Structure
 This table details the messages that will be sent between the boards. The identifiers at the begining of the messages show who is sending the message to whom. The messages are labled with English identifiers for ease of reading. <br>
 
-Message Type Byte 1-2 (char)	|Description	|Byte 1-2 (char)	|Byte 3 (char)	|Byte 4 (char)	|M	|Byte 63 (char)	|Byte 64 (char)|
-----------------------------------|-------------|---------------------|-----------------|-------------------|---|-------------------|------------------|
-1	|Desired speed	|AZ(char)|H(char)	|B(char)	|Change Speed(char)	|Y (char)	|B (char)|
-2	|User Safe?	|AZ(char)	|S(char)	|B(char)	|Check Distance(char)	|Y (char)	|B (char)|
-3	|Direct Drive	|AZ(char)	|H(char)	|B(char)	|Change Direction(char)	|Y (char)	|B (char)|
-4	|Motor Speed	|AZ(char)	|B(char)	|G(char)	|Speed(int)	|Y (char)	|B (char)|
-5 |Distanc Data |AZ(char) |S(char)  |H(char)  |Distance(int) |Y(char) |B(char)|
+|Description	|Byte 1-2 (char)	|Byte 3 (char)	|Byte 4 (char)	|M	|Byte 63 (char)	|Byte 64 (char)|
+|-------------|---------------------|-----------------|-------------------|---|-------------------|------------------|
+|Desired speed	|AZ(char)|H(char)	|B(char)	|Change Speed(char)	|Y (char)	|B (char)|
+|User Safe?	|AZ(char)	|S(char)	|B(char)	|Check Distance(char)	|Y (char)	|B (char)|
+|Direct Drive	|AZ(char)	|H(char)	|B(char)	|Change Direction(char)	|Y (char)	|B (char)|
+|Motor Speed	|AZ(char)	|B(char)	|G(char)	|Speed(int)	|Y (char)	|B (char)|
+|Distanc Data |AZ(char) |S(char)  |H(char)  |Distance(int) |Y(char) |B(char)|
 
 ### Key
 Systems	| IDs
