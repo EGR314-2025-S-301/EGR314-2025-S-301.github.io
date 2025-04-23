@@ -58,3 +58,13 @@ A complete report of the messages Ella's system can handle can be found [here](-
 #### Ella to Sara
 #### Ella to Xander
 #### Ella to Julia
+
+### Full API Table
+
+Message Type|Message ID Type:|Xander Role: HMI ID: H|Julia Role: Sensor ID: S|Sarah Role: Motor ID: B|Ella Role: Web ID: G|
+------|------|------|------|------|------|
+Desired speed|H|S (Press Planet)|-|R (Change motor speed according to planet)|-|
+User Safe?|S|-|S (User safe based off of distance)|R (Turn on or off Motor)|R (Publish user is safe)|
+Direct Drive|H|S (Spin left or right)|-|R (motor spins left or right)|-|
+Motor Speed|B|-|-|S (speed of motor)|R (publish motor speed to mqtt)|
+Distance Data|S|R (Display Distance Data on Screen)|S (Send distance)|-|-|
