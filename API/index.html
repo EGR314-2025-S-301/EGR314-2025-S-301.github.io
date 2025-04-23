@@ -587,6 +587,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#full-api-table" class="md-nav__link">
+    Full API Table
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -933,6 +940,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#full-api-table" class="md-nav__link">
+    Full API Table
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1076,6 +1090,61 @@ Each initial is based on the team member's last name. This choice was made so th
 <h4 id="ella-to-sara">Ella to Sara</h4>
 <h4 id="ella-to-xander">Ella to Xander</h4>
 <h4 id="ella-to-julia">Ella to Julia</h4>
+<h3 id="full-api-table">Full API Table</h3>
+<table>
+<thead>
+<tr>
+<th>Message Type</th>
+<th>Message ID Type:</th>
+<th>Xander Role: HMI ID: H</th>
+<th>Julia Role: Sensor ID: S</th>
+<th>Sarah Role: Motor ID: B</th>
+<th>Ella Role: Web ID: G</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desired speed</td>
+<td>H</td>
+<td>S (Press Planet)</td>
+<td>-</td>
+<td>R (Change motor speed according to planet)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>User Safe?</td>
+<td>S</td>
+<td>-</td>
+<td>S (User safe based off of distance)</td>
+<td>R (Turn on or off Motor)</td>
+<td>R (Publish user is safe)</td>
+</tr>
+<tr>
+<td>Direct Drive</td>
+<td>H</td>
+<td>S (Spin left or right)</td>
+<td>-</td>
+<td>R (motor spins left or right)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Motor Speed</td>
+<td>B</td>
+<td>-</td>
+<td>-</td>
+<td>S (speed of motor)</td>
+<td>R (publish motor speed to mqtt)</td>
+</tr>
+<tr>
+<td>Distance Data</td>
+<td>S</td>
+<td>R (Display Distance Data on Screen)</td>
+<td>S (Send distance)</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
 
 
 
