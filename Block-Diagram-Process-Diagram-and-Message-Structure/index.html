@@ -968,12 +968,8 @@
 </tbody>
 </table>
 <h3 id="why-this-message-format">Why This Message Format?</h3>
-<ul>
-<li><code>AZ</code> and <code>YB</code> act as <strong>start/end delimiters</strong> to ensure correct parsing.</li>
-<li>Fixed-length messages simplify buffer management.</li>
-<li>Character-based IDs avoid collisions and ease message routing.</li>
-<li>System design uses <strong>one UART bus</strong>, so parsing and reliability are critical.</li>
-</ul>
+<p>We chose this message format because it ensures correct parsing. Byte 1-2 ("AZ") identify the beggining of a message. Byte 3 identifies the sender. Byte 4 identifies the receiver. Byte 5-62 stores the message data. Byte 63-64 ("YB") identifies the end of the message.
+This format allows individual subsystems to ignore messages not intendend for them which ensures there is no unecessary processesing/lag time. It also ensures corrupted messages can be identified and removed from the loop. </p>
 <h3 id="sample-message-example">Sample Message Example</h3>
 <p>For example, the string sent from Xander to Sara concerning the direction and speed of the motor would be written as follows: <br>
 <strong>AZHB15YB</strong></p>
