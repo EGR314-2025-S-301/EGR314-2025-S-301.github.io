@@ -73,7 +73,7 @@ This table details the messages that will be sent between the boards. The identi
 - System design uses **one UART bus**, so parsing and reliability are critical.
 
 ### Sample Message Example
-
+For example, the string sent from Xander to Sara concerning the direction and speed of the motor would be written as follows: <br>
 **AZHB15YB**
 
 - `AZ`: Start of message  
@@ -84,19 +84,10 @@ This table details the messages that will be sent between the boards. The identi
 - `YB`: End of message  
 
 <br>The IDs are assigned based on the sender and receiver's last names, as X would interfear with the brodcast character defined by the course.<br>
-### Sample String
-For example, the string sent from Xander to Sara concerning the direction and speed of the motor would be written as follows:<br>
-**AZHB05YB** <br>
-AZ identifies the start of a string<br>
-H means that Xander's system is sending the message<br>
-B means that the message is meant to be received by Sara's system<br>
-1 indicates the direction Sara's motor should spin <br>
-5 indicates the speed should be representitive of Jupiter's gravity <br>
-YB indicates the end of the string
 
 ## Biggest Changes to the Software
 Since the software proposal, there have been many changes to the software. The following are the most notable updates since the initial software proposal. Some of these changes have been noted and absorbed into the report above, but they are updates nonetheless. <br>
-1. **Splitting the motor system across two PICs.:** Due to the intensity of the software required for the message handling and the SPI control of the motor driver, the code could not run fully on one PIC. When the SPI code was added to the API project, the API stopped processing messages, and when the API code was added to the SPI project, the SPI stopped controlling the motor. Despite the added cost, the most efficient solution was to program two separate PICs and have them communicate with each other. One would analyse and handle the messages from the UART daisy chain, while the other would take that information and determine how to control the motor driver
+1. **Splitting the motor system across two PICs.:** Due to the intensity of the software required for the message handling and the SPI control of the motor driver, the code could not run fully on one PIC. When the SPI code was added to the API project, the API stopped processing messages, and when the API code was added to the SPI project, the SPI stopped controlling the motor. Despite the added cost, the most efficient solution was to program two separate PICs and have them communicate with each other. One would analyse and handle the messages from the UART daisy chain, while the other would take that information and determine how to control the motor driver <br>
 2. **Inclusion of the motor driver’s logic gate.:** In order to use two PICs in one system, there needed to be a way for them to communicate with each other without interfering with the other systems. To do this, a 4 pin logic system was built between the PICS to determine what was selected. The first pin, B0 on both PICS, was high when the distance sensor indicated that it was safe to move the motor. Without this input, the motor would not spin. This also meant if this pin got disconnected, the motor would turn off, making it safer to reconnect the pins. The next three pins, B1, B2, and B3, turn on and off in specific patterns to indicate which planet is selected. All three pins being low indicates pluto, which has a relative RPM of 0, making it safer to reconnect any disconnected wires. For testing and demonstration purposes, LEDs were added on each logic line to indicate when they were high and low. The complete logic table is as follows <br>
 
   |Setting|B0|B1|B2|B3|
