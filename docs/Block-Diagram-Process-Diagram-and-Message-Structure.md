@@ -80,21 +80,7 @@ Since the software proposal, there have been many changes to the software. The f
 1. **Splitting the motor system across two PICs:** <br>
 Due to the intensity of the software required for the message handling and the SPI control of the motor driver, the code could not run fully on one PIC. When the SPI code was added to the API project, the API stopped processing messages, and when the API code was added to the SPI project, the SPI stopped controlling the motor. Despite the added cost, the most efficient solution was to program two separate PICs and have them communicate with each other. One would analyse and handle the messages from the UART daisy chain, while the other would take that information and determine how to control the motor driver <br>
 2. **Inclusion of the motor driver’s logic gate:** <br>
-In order to use two PICs in one system, there needed to be a way for them to communicate with each other without interfering with the other systems. To do this, a 4 pin logic system was built between the PICS to determine what was selected. The first pin, B0 on both PICS, was high when the distance sensor indicated that it was safe to move the motor. Without this input, the motor would not spin. This also meant if this pin got disconnected, the motor would turn off, making it safer to reconnect the pins. The next three pins, B1, B2, and B3, turn on and off in specific patterns to indicate which planet is selected. All three pins being low indicates pluto, which has a relative RPM of 0, making it safer to reconnect any disconnected wires. For testing and demonstration purposes, LEDs were added on each logic line to indicate when they were high and low. The complete logic table is as follows <br>
-
-  |Setting|B0|B1|B2|B3|
-  |-------|---|---|---|---|
-  |Off for safety|low|either|either|either|
-  |Mercury|either|high|high|high|
-  |Venus|either|high|low|low|
-  |Moon|either|low|high|low|
-  |Mars|either|low|low|high|
-  |Jupiter|either|high|high|low|
-  |Saturn|either|low|high|high|
-  |Neptune|either|high|low|high|
-  |Pluto|either|low|low|low|
-
-<br>
+In order to use two PICs in one system, there needed to be a way for them to communicate with each other without interfering with the other systems. To do this, a 4 pin logic system was built between the PICS to determine what was selected. The first pin, B0 on both PICS, was high when the distance sensor indicated that it was safe to move the motor. Without this input, the motor would not spin. This also meant if this pin got disconnected, the motor would turn off, making it safer to reconnect the pins. The next three pins, B1, B2, and B3, turn on and off in specific patterns to indicate which planet is selected. All three pins being low indicates pluto, which has a relative RPM of 0, making it safer to reconnect any disconnected wires. For testing and demonstration purposes, LEDs were added on each logic line to indicate when they were high and low. The complete logic table is as [here](https://sarabohart.github.io/blockdiagram/#functionality) <br>
 3. **Uart speed while systems were communicating:** <br>
 The speed of the distance data being displayed on the OLED screen was incredibly slow. It would take anywhere from 10-30 seconds for a value to be displayed. This is because the motor driver subsystem was doing other things with the message before sending it out. The process rx function in the system would try to print the message instead of just sending it out. After removal of this, messages were populating much quicker on the HMI. <br>
 4. **Rearrangement of the daisy chain:** <br>
