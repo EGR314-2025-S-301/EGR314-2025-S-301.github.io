@@ -16,7 +16,10 @@ EGR 314, Prof. Nichols <br>
 [Team Organization](team-organization.md) <br>
 [Ideation and Concept Generation](ideation-and-concept-generation.md) <br>
 [Block Diagram, Process Diagram, and Message Structure](Block-Diagram-Process-Diagram-and-Message-Structure.md) <br>
-[Appendix](appendix.md)
+[API](https://egr314-2025-s-301.github.io/API/)<br>
+[Innovation Showcase Poster](https://egr314-2025-s-301.github.io/Innovation%20Showcase%20Poster/)<br>
+[Reflection](https://egr314-2025-s-301.github.io/Reflection/)<br>
+[Resources](https://egr314-2025-s-301.github.io/Resources/)<br>
 
 ### Individual GitHub Links
 [Ella Greetis](https://starfruwuit.github.io/egr314report/00mainPage/) <br>
