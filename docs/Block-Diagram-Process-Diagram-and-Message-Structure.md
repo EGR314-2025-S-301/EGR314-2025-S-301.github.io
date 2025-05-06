@@ -35,9 +35,7 @@ This process diagram shows how the messages will be transfered over the daisy ch
 
 ## Communication Sequence Function Justification
 
-The communication sequence satisfies the system's real-time and safety-critical constraints. Messages propagate from upstream to downstream, ensuring the motor does not operate unless a safety signal is received. The message format allows each subsystem to parse only the information relevant to them, preventing unnecessary delays or overloading the serial bus.
-
-This message structure ensures timely response from the motor driver; prioritizing user safety overall other functions.  
+Our communication sequence is designed to keep the system safe and responsive. Messages flow from the first board to the last, and the motor won't run unless it gets a safety signal first. Each subsystem only reads the parts of the message meant for it, which helps avoid slowdowns or confusion on the serial line. This setup makes sure the motor reacts quickly and puts user safety above everything else.
 
 ## Message Structure
 
