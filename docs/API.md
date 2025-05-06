@@ -54,11 +54,14 @@ A complete report of the messages Julia's system can handle can be found [here](
 #### Julia to Ella
 
 ### Ella
-A complete report of the messages Ella's system can handle can be found [here](-LINK TO ELLA'S API PAGE-).
+A complete report of the messages Ella's system can handle can be found [here](https://starfruwuit.github.io/egr314report/05API/).
+Ella's board is also capable of sending "feedback" messages from the MQTT server to any teammate.
 #### Ella to Sara
+Ella's subsystem does not send any messages to Sarah's subsystem.
 #### Ella to Xander
+Ella's subsystem does not send any messages to Xander's subsystem. 
 #### Ella to Julia
-
+Ella's subsystem does not send any messages to Julia's subsystem.
 ### Full API Table
 
 Message Type|Message ID Type:|Xander Role: HMI ID: H|Julia Role: Sensor ID: S|Sarah Role: Motor ID: B|Ella Role: Web ID: G|
