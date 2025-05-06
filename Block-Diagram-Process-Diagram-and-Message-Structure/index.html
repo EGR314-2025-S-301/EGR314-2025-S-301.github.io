@@ -1012,6 +1012,83 @@ YB indicates the end of the string</p>
 <p>Since the software proposal, there have been many changes to the software. The following are the most notable updates since the initial software proposal. Some of these changes have been noted and absorbed into the report above, but they are updates nonetheless. <br>
 1. <strong>Splitting the motor system across two PICs.:</strong> Due to the intensity of the software required for the message handling and the SPI control of the motor driver, the code could not run fully on one PIC. When the SPI code was added to the API project, the API stopped processing messages, and when the API code was added to the SPI project, the SPI stopped controlling the motor. Despite the added cost, the most efficient solution was to program two separate PICs and have them communicate with each other. One would analyse and handle the messages from the UART daisy chain, while the other would take that information and determine how to control the motor driver
 2. <strong>Inclusion of the motor driver’s logic gate.:</strong> In order to use two PICs in one system, there needed to be a way for them to communicate with each other without interfering with the other systems. To do this, a 4 pin logic system was built between the PICS to determine what was selected. The first pin, B0 on both PICS, was high when the distance sensor indicated that it was safe to move the motor. Without this input, the motor would not spin. This also meant if this pin got disconnected, the motor would turn off, making it safer to reconnect the pins. The next three pins, B1, B2, and B3, turn on and off in specific patterns to indicate which planet is selected. All three pins being low indicates pluto, which has a relative RPM of 0, making it safer to reconnect any disconnected wires. For testing and demonstration purposes, LEDs were added on each logic line to indicate when they were high and low. The complete logic table is as follows <br></p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>B0</th>
+<th>B1</th>
+<th>B2</th>
+<th>B3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Off for safety</td>
+<td>low</td>
+<td>either</td>
+<td>either</td>
+<td>either</td>
+</tr>
+<tr>
+<td>Mercury</td>
+<td>either</td>
+<td>high</td>
+<td>high</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Venus</td>
+<td>either</td>
+<td>high</td>
+<td>low</td>
+<td>low</td>
+</tr>
+<tr>
+<td>Moon</td>
+<td>either</td>
+<td>low</td>
+<td>high</td>
+<td>low</td>
+</tr>
+<tr>
+<td>Mars</td>
+<td>either</td>
+<td>low</td>
+<td>low</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Jupiter</td>
+<td>either</td>
+<td>high</td>
+<td>high</td>
+<td>low</td>
+</tr>
+<tr>
+<td>Saturn</td>
+<td>either</td>
+<td>low</td>
+<td>high</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Neptune</td>
+<td>either</td>
+<td>high</td>
+<td>low</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Pluto</td>
+<td>either</td>
+<td>low</td>
+<td>low</td>
+<td>low</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
 
 
 
