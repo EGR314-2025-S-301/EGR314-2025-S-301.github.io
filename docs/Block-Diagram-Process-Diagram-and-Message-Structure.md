@@ -14,7 +14,8 @@ This image shows how our individual systems would connect to eachother to send m
 [Ella's Bidirectional Internet Communication](https://starfruwuit.github.io/egr314report/01BlockDiagram/)
 ## Process Diagram
 <br> This process diagram shows how the messages will be transfered over the daisy chain. 
-![301 Sequence Diagram](Process%20v2-1.png)
+![301 Sequence Diagram drawio (1)](https://github.com/user-attachments/assets/35a8e47c-466e-43e9-9cf5-69d27b3ec3d4)
+
 ## Message Structure
 This table details the messages that will be sent between the boards. The identifiers at the begining of the messages show who is sending the message to whom. The messages are labled with English identifiers for ease of reading. <br>
 
