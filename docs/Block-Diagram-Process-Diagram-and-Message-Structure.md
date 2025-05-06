@@ -66,11 +66,8 @@ This table details the messages that will be sent between the boards. The identi
 | Ella      | G         |
 
 ### Why This Message Format?
-
-- `AZ` and `YB` act as **start/end delimiters** to ensure correct parsing.
-- Fixed-length messages simplify buffer management.
-- Character-based IDs avoid collisions and ease message routing.
-- System design uses **one UART bus**, so parsing and reliability are critical.
+We chose this message format because it ensures correct parsing. Byte 1-2 ("AZ") identify the beggining of a message. Byte 3 identifies the sender. Byte 4 identifies the receiver. Byte 5-62 stores the message data. Byte 63-64 ("YB") identifies the end of the message.
+This format allows individual subsystems to ignore messages not intendend for them which ensures there is no unecessary processesing/lag time. It also ensures corrupted messages can be identified and removed from the loop. 
 
 ### Sample Message Example
 For example, the string sent from Xander to Sara concerning the direction and speed of the motor would be written as follows: <br>
