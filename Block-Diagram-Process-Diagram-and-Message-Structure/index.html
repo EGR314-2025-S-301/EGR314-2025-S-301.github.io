@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#team-block-diagram" class="md-skip">
+        <a href="#block-diagram-process-diagram-and-message-structure" class="md-skip">
           Skip to content
         </a>
       
@@ -455,6 +455,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -482,6 +484,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -511,8 +515,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#process-diagram" class="md-nav__link">
-    Process Diagram
+  <a href="#how-the-block-diagram-meets-product-requirements" class="md-nav__link">
+    How the Block Diagram Meets Product Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication-process-diagram" class="md-nav__link">
+    Communication Process Diagram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication-sequence-function-justification" class="md-nav__link">
+    Communication Sequence Function Justification
   </a>
   
 </li>
@@ -526,15 +544,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#key" class="md-nav__link">
-    Key
+  <a href="#id-legend" class="md-nav__link">
+    ID Legend
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sample-string" class="md-nav__link">
-    Sample String
+  <a href="#why-this-message-format" class="md-nav__link">
+    Why This Message Format?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-message-example" class="md-nav__link">
+    Sample Message Example
   </a>
   
 </li>
@@ -545,8 +570,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#biggest-changes-to-the-software" class="md-nav__link">
-    Biggest Changes to the Software
+  <a href="#top-5-biggest-changes-to-the-software-design" class="md-nav__link">
+    Top 5 Biggest Changes to the Software Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
   </a>
   
 </li>
@@ -714,6 +746,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -742,8 +776,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#process-diagram" class="md-nav__link">
-    Process Diagram
+  <a href="#how-the-block-diagram-meets-product-requirements" class="md-nav__link">
+    How the Block Diagram Meets Product Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication-process-diagram" class="md-nav__link">
+    Communication Process Diagram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication-sequence-function-justification" class="md-nav__link">
+    Communication Sequence Function Justification
   </a>
   
 </li>
@@ -757,15 +805,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#key" class="md-nav__link">
-    Key
+  <a href="#id-legend" class="md-nav__link">
+    ID Legend
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sample-string" class="md-nav__link">
-    Sample String
+  <a href="#why-this-message-format" class="md-nav__link">
+    Why This Message Format?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-message-example" class="md-nav__link">
+    Sample Message Example
   </a>
   
 </li>
@@ -776,8 +831,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#biggest-changes-to-the-software" class="md-nav__link">
-    Biggest Changes to the Software
+  <a href="#top-5-biggest-changes-to-the-software-design" class="md-nav__link">
+    Top 5 Biggest Changes to the Software Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
   </a>
   
 </li>
@@ -805,202 +867,175 @@
   
 
 
-  <h1>Block Diagram, Process Diagram, and Message Structure</h1>
-
+<h1 id="block-diagram-process-diagram-and-message-structure">Block Diagram, Process Diagram, and Message Structure</h1>
 <h2 id="team-block-diagram">Team Block Diagram</h2>
-<p>This image shows how our individual systems would connect to eachother to send messages over UART. As this is only meant to show the daisy-chain connection, the detainls of each system have been left out. For more detailed versions of the individual systems, check out our individual githubs! <br>
-<a class="glightbox" href="https://github.com/user-attachments/assets/33fdedd6-2b3a-41a9-8519-0ec4a5719b93" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="EGR_314_Team_Block_Diaram-Page-1 drawio (1)" src="https://github.com/user-attachments/assets/33fdedd6-2b3a-41a9-8519-0ec4a5719b93" /></a>
-<br>
-<a href="https://xanderheafey.github.io/Block-Diagram/">Xander's Human Machine Interface</a><br>
-<a href="https://sarabohart.github.io/blockdiagram/">Sara's Motor</a><br>
-<a href="https://juliasmith141414.github.io/blockdiagram/">Julia's Sensor</a><br>
-<a href="https://starfruwuit.github.io/egr314report/01BlockDiagram/">Ella's Bidirectional Internet Communication</a>
-<br></p>
+<p>This image shows how our individual systems connect to one another to send messages over UART. Because this diagram is intended to demonstrate the daisy-chain communication structure, individual system details have been excluded. For subsystem-specific designs, please view our individual GitHub pages.</p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/33fdedd6-2b3a-41a9-8519-0ec4a5719b93" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="EGR_314_Team_Block_Diaram-Page-1 drawio (1)" src="https://github.com/user-attachments/assets/33fdedd6-2b3a-41a9-8519-0ec4a5719b93" /></a></p>
+<p><strong>Individual Block Diagrams:</strong></p>
+<ul>
+<li><a href="https://xanderheafey.github.io/Block-Diagram/">Xander's Human Machine Interface</a></li>
+<li><a href="https://sarabohart.github.io/blockdiagram/">Sara's Motor Subsystem</a></li>
+<li><a href="https://juliasmith141414.github.io/blockdiagram/">Julia's Distance Sensor</a></li>
+<li><a href="https://starfruwuit.github.io/egr314report/01BlockDiagram/">Ella's MQTT Communication</a></li>
+</ul>
 <h3 id="justification-of-block-diagram-structure">Justification of Block Diagram Structure</h3>
-<p>This Order was ideal because of who need what information more. Julia's system does not rely on any input from anyone, it simply outputs data and a judgement of if it is safe to opporate the motor. As suce, her system is at the front of our daisy chain. While the chain is a loop, thinking of it as a line makes it easier to understand who goes where. Next is Xander's system, because his OLED needs to output realtime distance data from Julia's sensor. If this data gets corrupted, his graph becomes inaccurate, so it is best to put their systems right next to eachother. Sara's motor driver needs information from both the distance sensor and the HMI, so this system is the next in the chain. It directly receives a planet value from the HMI, and the HMI passes along a 1 or 0 from the distance sensor. Both messages control the speed of the motor, which is shared with the MQTT server. The safety condition is also sent to the server. Ella's MQTT system does not have any critical information to send to any other system, so this system is the last in the daisy chain. This sequence puts those who rely most heavily on eachothers information closest together, optimising the efficiency of the communucation structure.</p>
-<h2 id="process-diagram">Process Diagram</h2>
-<p><br> This process diagram shows how the messages will be transfered over the daisy chain. 
-<a class="glightbox" href="https://github.com/user-attachments/assets/35a8e47c-466e-43e9-9cf5-69d27b3ec3d4" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="301 Sequence Diagram drawio (1)" src="https://github.com/user-attachments/assets/35a8e47c-466e-43e9-9cf5-69d27b3ec3d4" /></a></p>
+<p>This communication order was chosen based on system dependencies and communication needs. Julia’s distance sensor outputs a binary safety flag and distance data, but requires no input, so it is placed at the start of the chain. Xander’s OLED must display this real-time data with minimal latency, so his system follows Julia’s. Sara’s motor driver uses both the planet selection from Xander and the safety status from Julia, placing her system third. Ella’s MQTT system transmits state information externally and doesn’t control internal systems, so it is logically last.</p>
+<p>This organization prioritizes <strong>communication efficiency</strong> and <strong>safety</strong>. Systems that rely on each other’s data are adjacent, minimizing the chance of message delay or corruption.</p>
+<hr />
+<h2 id="how-the-block-diagram-meets-product-requirements">How the Block Diagram Meets Product Requirements</h2>
+<p>The physical and logical structure supports:
+- <strong>User safety</strong>: by prioritizing the distance sensor data and enforcing its position in the chain.
+- <strong>Low latency</strong>: by placing interdependent systems next to each other.
+- <strong>Debuggability</strong>: each module can operate independently, easing troubleshooting.
+- <strong>Expandability</strong>: the daisy chain allows easy addition or removal of subsystems.</p>
+<hr />
+<h2 id="communication-process-diagram">Communication Process Diagram</h2>
+<p>This process diagram visualizes how messages move between the systems.</p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/35a8e47c-466e-43e9-9cf5-69d27b3ec3d4" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="301 Sequence Diagram drawio (1)" src="https://github.com/user-attachments/assets/35a8e47c-466e-43e9-9cf5-69d27b3ec3d4" /></a></p>
+<hr />
+<h2 id="communication-sequence-function-justification">Communication Sequence Function Justification</h2>
+<p>The communication sequence satisfies the system's real-time and safety-critical constraints. Messages propagate from upstream to downstream, ensuring the motor does not operate unless a safety signal is received. The message format allows each subsystem to parse only the information relevant to them, preventing unnecessary delays.</p>
+<p>This structure ensures:
+- <strong>Timely response to unsafe conditions</strong>
+- <strong>Correct interpretation of multi-parameter commands (planet, direction, safety)</strong>
+- <strong>Modular expansion or substitution of subsystems</strong></p>
+<hr />
 <h2 id="message-structure">Message Structure</h2>
-<p>This table details the messages that will be sent between the boards. The identifiers at the begining of the messages show who is sending the message to whom. The messages are labled with English identifiers for ease of reading. <br></p>
+<p>The following table defines all expected messages between subsystems. Messages are 64 characters long, and framed with identifiers for the start and end of a message.</p>
 <table>
 <thead>
 <tr>
 <th>Description</th>
-<th>Byte 1-2 (char)</th>
-<th>Byte 3 (char)</th>
-<th>Byte 4 (char)</th>
-<th>M</th>
-<th>Byte 63 (char)</th>
-<th>Byte 64 (char)</th>
+<th>Byte 1-2</th>
+<th>Byte 3</th>
+<th>Byte 4</th>
+<th>Byte 5 (Data)</th>
+<th>Byte 63</th>
+<th>Byte 64</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Desired speed</td>
-<td>AZ(char)</td>
-<td>H(char)</td>
-<td>B(char)</td>
-<td>Change Speed(char)</td>
-<td>Y (char)</td>
-<td>B (char)</td>
+<td>AZ</td>
+<td>H</td>
+<td>B</td>
+<td>Change Speed (char)</td>
+<td>Y</td>
+<td>B</td>
 </tr>
 <tr>
 <td>User Safe?</td>
-<td>AZ(char)</td>
-<td>S(char)</td>
-<td>B(char)</td>
-<td>Check Distance(char)</td>
-<td>Y (char)</td>
-<td>B (char)</td>
+<td>AZ</td>
+<td>S</td>
+<td>B</td>
+<td>Safety Flag (0/1)</td>
+<td>Y</td>
+<td>B</td>
 </tr>
 <tr>
 <td>Direct Drive</td>
-<td>AZ(char)</td>
-<td>H(char)</td>
-<td>B(char)</td>
-<td>Change Direction(char)</td>
-<td>Y (char)</td>
-<td>B (char)</td>
+<td>AZ</td>
+<td>H</td>
+<td>B</td>
+<td>Direction (char)</td>
+<td>Y</td>
+<td>B</td>
 </tr>
 <tr>
 <td>Motor Speed</td>
-<td>AZ(char)</td>
-<td>B(char)</td>
-<td>G(char)</td>
-<td>Speed(int)</td>
-<td>Y (char)</td>
-<td>B (char)</td>
+<td>AZ</td>
+<td>B</td>
+<td>G</td>
+<td>Speed (int)</td>
+<td>Y</td>
+<td>B</td>
 </tr>
 <tr>
-<td>Distanc Data</td>
-<td>AZ(char)</td>
-<td>S(char)</td>
-<td>H(char)</td>
-<td>Distance(int)</td>
-<td>Y(char)</td>
-<td>B(char)</td>
+<td>Distance Data</td>
+<td>AZ</td>
+<td>S</td>
+<td>H</td>
+<td>Distance (int)</td>
+<td>Y</td>
+<td>B</td>
 </tr>
 </tbody>
 </table>
-<h3 id="key">Key</h3>
+<h3 id="id-legend">ID Legend</h3>
 <table>
 <thead>
 <tr>
-<th>Systems</th>
-<th>IDs</th>
+<th>Subsystem</th>
+<th>ID (char)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>Julia</td>
+<td>S</td>
+</tr>
+<tr>
 <td>Xander</td>
-<td>H(char)</td>
+<td>H</td>
 </tr>
 <tr>
 <td>Sara</td>
-<td>B(char)</td>
-</tr>
-<tr>
-<td>Julia</td>
-<td>S(char)</td>
+<td>B</td>
 </tr>
 <tr>
 <td>Ella</td>
-<td>G(char)</td>
+<td>G</td>
 </tr>
 </tbody>
 </table>
-<p><br>The IDs are assigned based on the sender and receiver's last names, as X would interfear with the brodcast character defined by the course.<br></p>
-<h3 id="sample-string">Sample String</h3>
-<p>For example, the string sent from Xander to Sara concerning the direction and speed of the motor would be written as follows:<br>
-<strong>AZHB05YB</strong> <br>
-AZ identifies the start of a string<br>
-H means that Xander's system is sending the message<br>
-B means that the message is meant to be received by Sara's system<br>
-1 indicates the direction Sara's motor should spin <br>
-5 indicates the speed should be representitive of Jupiter's gravity <br>
-YB indicates the end of the string</p>
-<h2 id="biggest-changes-to-the-software">Biggest Changes to the Software</h2>
-<p>Since the software proposal, there have been many changes to the software. The following are the most notable updates since the initial software proposal. Some of these changes have been noted and absorbed into the report above, but they are updates nonetheless. <br>
-1. <strong>Splitting the motor system across two PICs.:</strong> Due to the intensity of the software required for the message handling and the SPI control of the motor driver, the code could not run fully on one PIC. When the SPI code was added to the API project, the API stopped processing messages, and when the API code was added to the SPI project, the SPI stopped controlling the motor. Despite the added cost, the most efficient solution was to program two separate PICs and have them communicate with each other. One would analyse and handle the messages from the UART daisy chain, while the other would take that information and determine how to control the motor driver
-2. <strong>Inclusion of the motor driver’s logic gate.:</strong> In order to use two PICs in one system, there needed to be a way for them to communicate with each other without interfering with the other systems. To do this, a 4 pin logic system was built between the PICS to determine what was selected. The first pin, B0 on both PICS, was high when the distance sensor indicated that it was safe to move the motor. Without this input, the motor would not spin. This also meant if this pin got disconnected, the motor would turn off, making it safer to reconnect the pins. The next three pins, B1, B2, and B3, turn on and off in specific patterns to indicate which planet is selected. All three pins being low indicates pluto, which has a relative RPM of 0, making it safer to reconnect any disconnected wires. For testing and demonstration purposes, LEDs were added on each logic line to indicate when they were high and low. The complete logic table is as follows <br></p>
-<table>
-<thead>
-<tr>
-<th>Setting</th>
-<th>B0</th>
-<th>B1</th>
-<th>B2</th>
-<th>B3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Off for safety</td>
-<td>low</td>
-<td>either</td>
-<td>either</td>
-<td>either</td>
-</tr>
-<tr>
-<td>Mercury</td>
-<td>either</td>
-<td>high</td>
-<td>high</td>
-<td>high</td>
-</tr>
-<tr>
-<td>Venus</td>
-<td>either</td>
-<td>high</td>
-<td>low</td>
-<td>low</td>
-</tr>
-<tr>
-<td>Moon</td>
-<td>either</td>
-<td>low</td>
-<td>high</td>
-<td>low</td>
-</tr>
-<tr>
-<td>Mars</td>
-<td>either</td>
-<td>low</td>
-<td>low</td>
-<td>high</td>
-</tr>
-<tr>
-<td>Jupiter</td>
-<td>either</td>
-<td>high</td>
-<td>high</td>
-<td>low</td>
-</tr>
-<tr>
-<td>Saturn</td>
-<td>either</td>
-<td>low</td>
-<td>high</td>
-<td>high</td>
-</tr>
-<tr>
-<td>Neptune</td>
-<td>either</td>
-<td>high</td>
-<td>low</td>
-<td>high</td>
-</tr>
-<tr>
-<td>Pluto</td>
-<td>either</td>
-<td>low</td>
-<td>low</td>
-<td>low</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
+<hr />
+<h3 id="why-this-message-format">Why This Message Format?</h3>
+<ul>
+<li><code>AZ</code> and <code>YB</code> act as <strong>start/end delimiters</strong> to ensure correct parsing.</li>
+<li>Fixed-length messages simplify buffer management.</li>
+<li>Character-based IDs avoid collisions and ease message routing.</li>
+<li>System design uses <strong>one UART bus</strong>, so parsing and reliability are critical.</li>
+</ul>
+<hr />
+<h3 id="sample-message-example">Sample Message Example</h3>
+<p><strong>AZHB15YB</strong></p>
+<ul>
+<li><code>AZ</code>: Start of message  </li>
+<li><code>H</code>: Sent by Xander  </li>
+<li><code>B</code>: Sent to Sara  </li>
+<li><code>1</code>: Motor direction = forward  </li>
+<li><code>5</code>: Motor speed = Jupiter gravity level  </li>
+<li><code>YB</code>: End of message  </li>
+</ul>
+<hr />
+<h2 id="top-5-biggest-changes-to-the-software-design">Top 5 Biggest Changes to the Software Design</h2>
+<ol>
+<li>
+<p><strong>Splitting the Motor Subsystem into Two PICs</strong><br />
+   Originally, a single PIC handled both UART parsing and SPI motor control. As complexity increased, messages interfered with SPI performance. The system was split: one PIC handles message parsing and logic, the second controls the motor based on logic pin inputs.</p>
+</li>
+<li>
+<p><strong>Logic Gate Between Motor PICs</strong><br />
+   To support the new dual-PIC setup, a logic-based communication system using 4 GPIO lines was implemented. One line (B0) communicates safety. The remaining 3 (B1–B3) encode the selected planet using a truth table. This allowed safe and reliable signaling between the PICs without blocking UART.</p>
+</li>
+<li>
+<p><strong>Added Message Framing (<code>AZ...YB</code>)</strong><br />
+   Framing messages with start (<code>AZ</code>) and end (<code>YB</code>) characters significantly improved message parsing reliability and allowed systems to easily resynchronize if a byte was dropped.</p>
+</li>
+<li>
+<p><strong>Error Handling Improvements</strong><br />
+   Systems now ignore malformed or misaddressed messages, rather than crashing. This change made debugging faster and communication more robust under load.</p>
+</li>
+<li>
+<p><strong>Real-time OLED Feedback for Debugging</strong><br />
+   Xander’s OLED system was originally for user display only, but was updated to show real-time system status (distance, motor state) for easier debugging. This added a valuable verification layer for the entire chain.</p>
+</li>
+</ol>
+<hr />
+<h2 id="summary">Summary</h2>
+<p>This final communication and software structure prioritizes <strong>user safety</strong>, <strong>debugging</strong>, and <strong>expandability</strong>. The block diagram reflects clean modularity, and the message structure allows for efficient and reliable parsing even under load.</p>
+<p>Our final system not only fulfills the original design goals but also adapts to evolving hardware needs, such as multi-PIC coordination and real-time feedback.</p>
 
 
 
