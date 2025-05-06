@@ -31,3 +31,9 @@ The planet it selected through the HMI system. A list of planets and celestial b
 The distance sensor is a safety feature that checks to see if someone is too close to the motor for it to safely operate. If someone is in range, the sensor tells the motor not to spin. This also happens over UART. <br>
 The MQTT system allows the project to have bidirectional internet communication. The speed setting and the safety data are written to the server using an ESP-32, which receives this information through the UART daisy chain. Users can also write a review on the MQTT Server, resulting in an LED flashing 5 times to indicate that the message was received. <br>
 Together, these system create a safe and interactive exhibit that introduces users to the relative differences in gravity on different celestial bodies in our solar system. Our hope is to encourage their curiosity and interest in space and physics as a whole. <br>
+
+## Planetary Centrifuge Top View
+![top_team](https://github.com/user-attachments/assets/b54f4541-e482-40f3-a32b-ec03ee1c2aa2)
+
+## Planetary Centrifuge Bottom View
+![bottom_team](https://github.com/user-attachments/assets/ca81d98f-1fdd-433e-baf9-eefa2df51cd5)
