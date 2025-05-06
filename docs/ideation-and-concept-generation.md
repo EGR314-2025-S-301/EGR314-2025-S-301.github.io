@@ -9,6 +9,9 @@ The goal of our exhibit is to let people learn concepts through a demonstration 
 
 Our audience will be 4th to 8th graders, as students in this age range are old enough to be trusted around more devices than children under this age range. Categorizing these students by grade also allows the team to understand what topics are appropriate for the age. The state of Arizona has standards for these grade levels, which can help inform what topics will be too advanced or too juvenile for our audience. 
 
+## Summary of Concept Generation
+At the begining of the semester, our team started generating ideas for science exhibits each member would have found interresting as a child. One of the ideas Xander had was a centrifuge that demonstrated the different gravities on all of the different planets in our solar system. The whole team agreed that this was an exciting project that could be made to fit the product requierments. The HMI and motor systems were fairly self explanitory, one had to let them select a planet and the other had power the motor to spin at a certain speed. We decided to use a distance sensor as a safety feature to satisfy the sensor requierment. Our plan was to write the machine use status over the internet so users could know when the machine was free without having to wait in a line. Overall, this project seemed to be fun and doable within the parameters of the class.
+
 ## Concept Presentation
 Watch the presentation of our concept [here](https://youtu.be/iGCgJ-NgmHc)
 ## Preliminary research
