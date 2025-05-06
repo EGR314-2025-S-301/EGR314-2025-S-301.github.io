@@ -26,11 +26,11 @@ This Order was ideal because of who need what information more. Julia's system d
 
 ## How the Block Diagram Meets Product Requirements
 
-The physical and logical structure supports:
-- **User safety**: by prioritizing the distance sensor data and enforcing its position in the chain.
-- **Low latency**: by placing interdependent systems next to each other.
-- **Debuggability**: each module can operate independently, easing troubleshooting.
-- **Expandability**: the daisy chain allows easy addition or removal of subsystems.
+The physical and logical structure supports: <br>
+- **User safety**: by prioritizing the distance sensor data and enforcing its position in the chain. <br>
+- **Low latency**: by placing interdependent systems next to each other. <br>
+- **Debuggability**: each module can operate independently, easing troubleshooting. <br>
+- **Expandability**: the daisy chain allows easy addition or removal of subsystems. <br>
 
 ## Communication Process Diagram
 
