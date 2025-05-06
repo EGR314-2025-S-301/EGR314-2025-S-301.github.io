@@ -872,8 +872,7 @@
 <p>This process diagram shows how the messages will be transfered over the daisy chain. </p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/35a8e47c-466e-43e9-9cf5-69d27b3ec3d4" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="301 Sequence Diagram drawio (1)" src="https://github.com/user-attachments/assets/35a8e47c-466e-43e9-9cf5-69d27b3ec3d4" /></a></p>
 <h2 id="communication-sequence-function-justification">Communication Sequence Function Justification</h2>
-<p>The communication sequence satisfies the system's real-time and safety-critical constraints. Messages propagate from upstream to downstream, ensuring the motor does not operate unless a safety signal is received. The message format allows each subsystem to parse only the information relevant to them, preventing unnecessary delays or overloading the serial bus.</p>
-<p>This message structure ensures timely response from the motor driver; prioritizing user safety overall other functions.  </p>
+<p>Our communication sequence is designed to keep the system safe and responsive. Messages flow from the first board to the last, and the motor won't run unless it gets a safety signal first. Each subsystem only reads the parts of the message meant for it, which helps avoid slowdowns or confusion on the serial line. This setup makes sure the motor reacts quickly and puts user safety above everything else.</p>
 <h2 id="message-structure">Message Structure</h2>
 <p>This table details the messages that will be sent between the boards. The identifiers at the begining of the messages show who is sending the message to whom. The messages are labled with English identifiers for ease of reading. <br></p>
 <table>
