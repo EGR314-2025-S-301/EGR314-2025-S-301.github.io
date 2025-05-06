@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+         <loc>https://embedded-systems-design.github.io/template_report/</loc>
+         <lastmod>2025-05-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://embedded-systems-design.github.io/template_report/API/</loc>
          <lastmod>2025-05-06</lastmod>
          <changefreq>daily</changefreq>
@@ -27,11 +32,6 @@
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/ideation-and-concept-generation/</loc>
-         <lastmod>2025-05-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://embedded-systems-design.github.io/template_report/main-page/</loc>
          <lastmod>2025-05-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
