@@ -564,6 +564,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sample-string" class="md-nav__link">
+    Sample String
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -572,13 +579,6 @@
         <li class="md-nav__item">
   <a href="#top-5-biggest-changes-to-the-software-design" class="md-nav__link">
     Top 5 Biggest Changes to the Software Design
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    Summary
   </a>
   
 </li>
@@ -825,6 +825,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sample-string" class="md-nav__link">
+    Sample String
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -833,13 +840,6 @@
         <li class="md-nav__item">
   <a href="#top-5-biggest-changes-to-the-software-design" class="md-nav__link">
     Top 5 Biggest Changes to the Software Design
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    Summary
   </a>
   
 </li>
@@ -869,7 +869,7 @@
 
 <h1 id="block-diagram-process-diagram-and-message-structure">Block Diagram, Process Diagram, and Message Structure</h1>
 <h2 id="team-block-diagram">Team Block Diagram</h2>
-<p>This image shows how our individual systems connect to one another to send messages over UART. Because this diagram is intended to demonstrate the daisy-chain communication structure, individual system details have been excluded. For subsystem-specific designs, please view our individual GitHub pages.</p>
+<p>This image shows how our individual systems would connect to eachother to send messages over UART. As this is only meant to show the daisy-chain connection, the detainls of each system have been left out. For more detailed versions of the individual systems, check out our individual githubs! <br></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/33fdedd6-2b3a-41a9-8519-0ec4a5719b93" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="EGR_314_Team_Block_Diaram-Page-1 drawio (1)" src="https://github.com/user-attachments/assets/33fdedd6-2b3a-41a9-8519-0ec4a5719b93" /></a></p>
 <p><strong>Individual Block Diagrams:</strong></p>
 <ul>
@@ -879,8 +879,7 @@
 <li><a href="https://starfruwuit.github.io/egr314report/01BlockDiagram/">Ella's MQTT Communication</a></li>
 </ul>
 <h3 id="justification-of-block-diagram-structure">Justification of Block Diagram Structure</h3>
-<p>This communication order was chosen based on system dependencies and communication needs. Julia’s distance sensor outputs a binary safety flag and distance data, but requires no input, so it is placed at the start of the chain. Xander’s OLED must display this real-time data with minimal latency, so his system follows Julia’s. Sara’s motor driver uses both the planet selection from Xander and the safety status from Julia, placing her system third. Ella’s MQTT system transmits state information externally and doesn’t control internal systems, so it is logically last.</p>
-<p>This organization prioritizes <strong>communication efficiency</strong> and <strong>safety</strong>. Systems that rely on each other’s data are adjacent, minimizing the chance of message delay or corruption.</p>
+<p>This Order was ideal because of who need what information more. Julia's system does not rely on any input from anyone, it simply outputs data and a judgement of if it is safe to opporate the motor. As suce, her system is at the front of our daisy chain. While the chain is a loop, thinking of it as a line makes it easier to understand who goes where. Next is Xander's system, because his OLED needs to output realtime distance data from Julia's sensor. If this data gets corrupted, his graph becomes inaccurate, so it is best to put their systems right next to eachother. Sara's motor driver needs information from both the distance sensor and the HMI, so this system is the next in the chain. It directly receives a planet value from the HMI, and the HMI passes along a 1 or 0 from the distance sensor. Both messages control the speed of the motor, which is shared with the MQTT server. The safety condition is also sent to the server. Ella's MQTT system does not have any critical information to send to any other system, so this system is the last in the daisy chain. This sequence puts those who rely most heavily on eachothers information closest together, optimising the efficiency of the communucation structure.</p>
 <hr />
 <h2 id="how-the-block-diagram-meets-product-requirements">How the Block Diagram Meets Product Requirements</h2>
 <p>The physical and logical structure supports:
@@ -890,18 +889,15 @@
 - <strong>Expandability</strong>: the daisy chain allows easy addition or removal of subsystems.</p>
 <hr />
 <h2 id="communication-process-diagram">Communication Process Diagram</h2>
-<p>This process diagram visualizes how messages move between the systems.</p>
+<p>This process diagram shows how the messages will be transfered over the daisy chain. </p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/35a8e47c-466e-43e9-9cf5-69d27b3ec3d4" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="301 Sequence Diagram drawio (1)" src="https://github.com/user-attachments/assets/35a8e47c-466e-43e9-9cf5-69d27b3ec3d4" /></a></p>
 <hr />
 <h2 id="communication-sequence-function-justification">Communication Sequence Function Justification</h2>
-<p>The communication sequence satisfies the system's real-time and safety-critical constraints. Messages propagate from upstream to downstream, ensuring the motor does not operate unless a safety signal is received. The message format allows each subsystem to parse only the information relevant to them, preventing unnecessary delays.</p>
-<p>This structure ensures:
-- <strong>Timely response to unsafe conditions</strong>
-- <strong>Correct interpretation of multi-parameter commands (planet, direction, safety)</strong>
-- <strong>Modular expansion or substitution of subsystems</strong></p>
+<p>The communication sequence satisfies the system's real-time and safety-critical constraints. Messages propagate from upstream to downstream, ensuring the motor does not operate unless a safety signal is received. The message format allows each subsystem to parse only the information relevant to them, preventing unnecessary delays or overloading the serial bus.</p>
+<p>This message structure ensures timely response from the motor driver; prioritizing user safety overall other functions.  </p>
 <hr />
 <h2 id="message-structure">Message Structure</h2>
-<p>The following table defines all expected messages between subsystems. Messages are 64 characters long, and framed with identifiers for the start and end of a message.</p>
+<p>This table details the messages that will be sent between the boards. The identifiers at the begining of the messages show who is sending the message to whom. The messages are labled with English identifiers for ease of reading. <br></p>
 <table>
 <thead>
 <tr>
@@ -1009,33 +1005,40 @@
 <li><code>YB</code>: End of message  </li>
 </ul>
 <hr />
+<p><br>The IDs are assigned based on the sender and receiver's last names, as X would interfear with the brodcast character defined by the course.<br></p>
+<h3 id="sample-string">Sample String</h3>
+<p>For example, the string sent from Xander to Sara concerning the direction and speed of the motor would be written as follows:<br>
+<strong>AZHB05YB</strong> <br>
+AZ identifies the start of a string<br>
+H means that Xander's system is sending the message<br>
+B means that the message is meant to be received by Sara's system<br>
+1 indicates the direction Sara's motor should spin <br>
+5 indicates the speed should be representitive of Jupiter's gravity <br>
+YB indicates the end of the string</p>
 <h2 id="top-5-biggest-changes-to-the-software-design">Top 5 Biggest Changes to the Software Design</h2>
 <ol>
 <li>
-<p><strong>Splitting the Motor Subsystem into Two PICs</strong><br />
+<p>Splitting the Motor Subsystem into Two PICs<br />
    Originally, a single PIC handled both UART parsing and SPI motor control. As complexity increased, messages interfered with SPI performance. The system was split: one PIC handles message parsing and logic, the second controls the motor based on logic pin inputs.</p>
 </li>
 <li>
-<p><strong>Logic Gate Between Motor PICs</strong><br />
+<p>Logic Gate Between Motor PICs<br />
    To support the new dual-PIC setup, a logic-based communication system using 4 GPIO lines was implemented. One line (B0) communicates safety. The remaining 3 (B1–B3) encode the selected planet using a truth table. This allowed safe and reliable signaling between the PICs without blocking UART.</p>
 </li>
 <li>
-<p><strong>Added Message Framing (<code>AZ...YB</code>)</strong><br />
+<p>Added Message Framing (<code>AZ...YB</code>)<br />
    Framing messages with start (<code>AZ</code>) and end (<code>YB</code>) characters significantly improved message parsing reliability and allowed systems to easily resynchronize if a byte was dropped.</p>
 </li>
 <li>
-<p><strong>Error Handling Improvements</strong><br />
+<p>Error Handling Improvements<br />
    Systems now ignore malformed or misaddressed messages, rather than crashing. This change made debugging faster and communication more robust under load.</p>
 </li>
 <li>
-<p><strong>Real-time OLED Feedback for Debugging</strong><br />
+<p>Real-time OLED Feedback for Debugging<br />
    Xander’s OLED system was originally for user display only, but was updated to show real-time system status (distance, motor state) for easier debugging. This added a valuable verification layer for the entire chain.</p>
 </li>
 </ol>
 <hr />
-<h2 id="summary">Summary</h2>
-<p>This final communication and software structure prioritizes <strong>user safety</strong>, <strong>debugging</strong>, and <strong>expandability</strong>. The block diagram reflects clean modularity, and the message structure allows for efficient and reliable parsing even under load.</p>
-<p>Our final system not only fulfills the original design goals but also adapts to evolving hardware needs, such as multi-PIC coordination and real-time feedback.</p>
 
 
 
