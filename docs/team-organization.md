@@ -25,8 +25,7 @@ with a well-designed, well-executed device
 
 ## Mission Statement
 ***Our Mission:*** <br>
-Sharing STEM education to inspire curiosity in 
-people of all ages.
+STEMteresting is a team of students dedicated to sharing STEM education to inspire curiosity in people of all ages.
 
 ## Communication Channels
  <br>
