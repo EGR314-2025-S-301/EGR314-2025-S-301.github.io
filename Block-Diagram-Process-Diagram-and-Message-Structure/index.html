@@ -867,11 +867,11 @@
 <h3 id="justification-of-block-diagram-structure">Justification of Block Diagram Structure</h3>
 <p>This Order was ideal because of who need what information more. Julia's system does not rely on any input from anyone, it simply outputs data and a judgement of if it is safe to opporate the motor. As suce, her system is at the front of our daisy chain. While the chain is a loop, thinking of it as a line makes it easier to understand who goes where. Next is Xander's system, because his OLED needs to output realtime distance data from Julia's sensor. If this data gets corrupted, his graph becomes inaccurate, so it is best to put their systems right next to eachother. Sara's motor driver needs information from both the distance sensor and the HMI, so this system is the next in the chain. It directly receives a planet value from the HMI, and the HMI passes along a 1 or 0 from the distance sensor. Both messages control the speed of the motor, which is shared with the MQTT server. The safety condition is also sent to the server. Ella's MQTT system does not have any critical information to send to any other system, so this system is the last in the daisy chain. This sequence puts those who rely most heavily on eachothers information closest together, optimising the efficiency of the communucation structure.</p>
 <h2 id="how-the-block-diagram-meets-product-requirements">How the Block Diagram Meets Product Requirements</h2>
-<p>The physical and logical structure supports:
-- <strong>User safety</strong>: by prioritizing the distance sensor data and enforcing its position in the chain.
-- <strong>Low latency</strong>: by placing interdependent systems next to each other.
-- <strong>Debuggability</strong>: each module can operate independently, easing troubleshooting.
-- <strong>Expandability</strong>: the daisy chain allows easy addition or removal of subsystems.</p>
+<p>The physical and logical structure supports: <br>
+- <strong>User safety</strong>: by prioritizing the distance sensor data and enforcing its position in the chain. <br>
+- <strong>Low latency</strong>: by placing interdependent systems next to each other. <br>
+- <strong>Debuggability</strong>: each module can operate independently, easing troubleshooting. <br>
+- <strong>Expandability</strong>: the daisy chain allows easy addition or removal of subsystems. <br></p>
 <h2 id="communication-process-diagram">Communication Process Diagram</h2>
 <p>This process diagram shows how the messages will be transfered over the daisy chain. </p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/35a8e47c-466e-43e9-9cf5-69d27b3ec3d4" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="301 Sequence Diagram drawio (1)" src="https://github.com/user-attachments/assets/35a8e47c-466e-43e9-9cf5-69d27b3ec3d4" /></a></p>
