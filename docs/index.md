@@ -35,6 +35,12 @@ The distance sensor is a safety feature that checks to see if someone is too clo
 The MQTT system allows the project to have bidirectional internet communication. The speed setting and the safety data are written to the server using an ESP-32, which receives this information through the UART daisy chain. Users can also write a review on the MQTT Server, resulting in an LED flashing 5 times to indicate that the message was received. <br>
 Together, these system create a safe and interactive exhibit that introduces users to the relative differences in gravity on different celestial bodies in our solar system. Our hope is to encourage their curiosity and interest in space and physics as a whole. <br>
 
-## Planetary Centrifuge Design
-![final_team](https://github.com/user-attachments/assets/8255903f-8294-4ab5-968f-d47e3d99124e)
+## Team PCBs Design
+Team Member|Front|Back|
+-----------|-----|-----|
+Julia|![Julia Front image](https://github.com/user-attachments/assets/0d25fc20-95b1-4da8-baa6-b44eb9828932)|![Julia Back image](https://github.com/user-attachments/assets/5e545b6c-c6e6-4074-b08f-f4e3bbc625e8)|
+Xander|![Xander Top image](https://github.com/user-attachments/assets/c57d0274-6a83-424e-83f4-5b0176c0c9da)|![Xander Bottom image](https://github.com/user-attachments/assets/b06f48fd-7473-4354-8240-c0fb83c9ce77)|
+Sara|![New Top image](https://github.com/user-attachments/assets/bda47107-898e-452d-9d3d-ee4d669cff2f)|![New Bottom image](https://github.com/user-attachments/assets/8694815f-24c9-4057-a13c-be446701deaf)|
+Ella|![Ella Top image](https://github.com/user-attachments/assets/65103e51-0313-472c-bc97-3a79d011aefb)|![Ella Bottom image](https://github.com/user-attachments/assets/e623c3b9-0d8b-4157-a720-f777cd7a6726)|
 
+Each PCB was designed by the respective team member. 
