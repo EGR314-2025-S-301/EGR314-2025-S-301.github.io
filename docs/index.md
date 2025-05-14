@@ -34,3 +34,18 @@ The planet it selected through the HMI system. A list of planets and celestial b
 The distance sensor is a safety feature that checks to see if someone is too close to the motor for it to safely operate. If someone is in range, the sensor tells the motor not to spin. This also happens over UART. <br>
 The MQTT system allows the project to have bidirectional internet communication. The speed setting and the safety data are written to the server using an ESP-32, which receives this information through the UART daisy chain. Users can also write a review on the MQTT Server, resulting in an LED flashing 5 times to indicate that the message was received. <br>
 Together, these system create a safe and interactive exhibit that introduces users to the relative differences in gravity on different celestial bodies in our solar system. Our hope is to encourage their curiosity and interest in space and physics as a whole. <br>
+
+
+## Final PCB Designs
+### Julia
+![Julia PCB Front](https://github.com/user-attachments/assets/d7a70ee6-d0e1-49a0-8e48-700dd82a195a)
+![Julia PCB Back](https://github.com/user-attachments/assets/8368e205-c7c7-4621-8deb-24f211963443)
+### Xander
+![Xander PCB Front](https://github.com/user-attachments/assets/0183b604-de67-4874-8c75-baa1924f3bad)
+![Xander PCB Back](https://github.com/user-attachments/assets/f01a29be-8fa6-4a80-9d81-2a5dbc5d9bac)
+### Sara
+![Sara PCB Front](https://github.com/user-attachments/assets/200b6da4-5e93-45ec-8db5-4831729a0f27)
+![Sara PCB Back](https://github.com/user-attachments/assets/161067b8-283f-4fd2-825e-0830a58d36e6)
+### Ella
+![Ella PCB Front](https://github.com/user-attachments/assets/51231579-f41f-4059-a392-ebebe0b104b2)
+![Ella PCB Back](https://github.com/user-attachments/assets/1d4a6af9-5cdd-4e07-bfbd-889014880a10)
